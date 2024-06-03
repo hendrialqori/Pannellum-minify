@@ -22,7 +22,6 @@ import pannellum from 'your_path_pannellum_export_file'
 export default function App(){
     const containerRef = React.useRef()
     const viewerRef = React.useRef()
-
     
     React.useEffect(function initialView(){
         //read official API doc pannellumjs
