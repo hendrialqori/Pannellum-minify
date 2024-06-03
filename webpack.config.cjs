@@ -10,9 +10,9 @@ module.exports = {
         './src/css/pannellum.css'
     ],
     output: {
-        filename: 'js/pannellum.min.js',
+        filename: 'pannellum.min.js',
         path: path.resolve(__dirname, 'build'),
-        assetModuleFilename: 'css/img/[name][ext]',
+        assetModuleFilename: 'assets/[name][ext]',
         clean: true
     },
     module: {
@@ -39,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/pannellum.min.css'
+            filename: 'pannellum.min.css'
         })
     ],
     mode: 'production'
