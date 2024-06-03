@@ -7,8 +7,8 @@ I took the initiative to create a src folder to minify the version using Webpack
 Copied the build folder from this repo and pasted it in your project, then created an index folder to import that file and import it to use in another file.
 ```js
 //index.ts
-import './pannellum.min.js'
-import './pannellum.min.css'
+import './build/pannellum.min.js'
+import './build/pannellum.min.css'
 
 const pannellum = (window as any).pannellum
 
@@ -25,28 +25,28 @@ export default function App(){
 
     
     React.useEffect(function initialView(){
-    //read official API doc pannellumjs
-    //https://pannellum.org/documentation/api/
+        //read official API doc pannellumjs
+        //https://pannellum.org/documentation/api/
 
-    viewerRef.current = pannellum.viewer(containerRef.current, {
-            type: "equirectangular",
-            panorama: "https://pannellum.org/images/cerro-toco-0.jpg",
-            yaw: 176,
-            pitch: -12,
-            autoLoad: true,
-            hotSpots: [
-                {
-                  "id": "1",
-                  "pitch": 14.1,
-                  "yaw": 100,
-                  "type": "info",
-                  "text": "Baltimore Museum of Art",
-                  "dragHandlerFunc": dragHandler,
-                  "dragHandlerArgs": "example arg"
-                  "draggable": "true",
-                  },
-            ]
-        })
+        viewerRef.current = pannellum.viewer(containerRef.current, {
+                type: "equirectangular",
+                panorama: "https://pannellum.org/images/cerro-toco-0.jpg",
+                yaw: 176,
+                pitch: -12,
+                autoLoad: true,
+                hotSpots: [
+                    {
+                    "id": "1",
+                    "pitch": 14.1,
+                    "yaw": 100,
+                    "type": "info",
+                    "text": "Baltimore Museum of Art",
+                    "dragHandlerFunc": dragHandler,
+                    "dragHandlerArgs": "example arg"
+                    "draggable": "true",
+                    },
+                ]
+            })
     }, [])
   
      function dragHandler(event, args) {
@@ -68,8 +68,8 @@ export default function App(){
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Hot spots</title>
-      <link rel="stylesheet" href="./pannellum.min.css"/>
-      <script type="text/javascript" src="./pannellum.min.js"></script>
+      <link rel="stylesheet" href="./build/pannellum.min.css"/>
+      <script type="text/javascript" src="./build/pannellum.min.js"></script>
       <style>
       #panorama {
           width: 100%;
