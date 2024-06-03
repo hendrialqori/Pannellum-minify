@@ -68,9 +68,8 @@ export default function App(){
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Hot spots</title>
-      <link rel="stylesheet" href="../src/css/pannellum.css"/>
-      <script type="text/javascript" src="../src/js/pannellum.js"></script>
-      <script type="text/javascript" src="../src/js/libpannellum.js"></script>
+      <link rel="stylesheet" href="./pannellum.min.css"/>
+      <script type="text/javascript" src="./pannellum.min.js"></script>
       <style>
       #panorama {
           width: 100%;
